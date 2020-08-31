@@ -28,11 +28,11 @@ import React, { Component } from 'react';
 
 class App extends Component {
   state = {
-    todos: []
+    flowers: []
   };//    This is where the magic happens/*  
   async componentDidMount() {
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/'); // fetching the data from api, before the page loaded
+      const res = await fetch('http://127.0.0.1:8000/build/'); // fetching the data from api, before the page loaded
       const flowers = await res.json();
       this.setState({
         flowers
@@ -45,9 +45,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.todos.map(item => (
+        {this.state.flowers.map(item => (
           <div key={item.id}>
-            <h1>{item.title}</h1>
+            <h1>{item.name}</h1>
             <span>{item.description}</span>
           </div>
         ))}

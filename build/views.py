@@ -12,5 +12,5 @@ class DetailFlowers(generics.RetrieveUpdateDestroyAPIView):
     serializers_class = FlowersSerializers
 
 # Create your views here.
-def index(request):
-    return render(request,'index.html')
+# def index(request):
+#     return render(request,'index.html')
